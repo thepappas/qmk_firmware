@@ -41,7 +41,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_VAL_STEP 17
 #endif
 
+//Define TAP_CODE_DELAY to mitigate RDP Issues
+#define TAP_CODE_DELAY 5
+
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
-
 //#define NO_AUTO_SHIFT_SPECIAL
