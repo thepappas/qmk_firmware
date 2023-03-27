@@ -53,8 +53,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 	[6] = LAYOUT_split_3x6_3(
         KC_TRNS,   LGUI(KC_L),  LCA(KC_DEL), LCA(KC_END), LCA(KC_INS),    KC_PSCR,      KC_AGIN, KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, KC_TRNS,
-        KC_TRNS,   LCTL(KC_Y),   LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V), LCTL(KC_Z),      KC_MS_L, KC_MS_U, KC_MS_D, KC_MS_R,  KC_ENT,  KC_DEL,
-        KC_ENT,  LCTL(KC_ENT), LCTL(KC_GRV),      KC_DEL,   RCS(KC_V),    KC_BSPC,      KC_WH_L, KC_WH_U, KC_WH_D, KC_WH_R, KC_FIND, KC_TRNS,
+        KC_TRNS,   LCTL(KC_Y),   LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V), LCTL(KC_Z),      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,  KC_ENT,  KC_DEL,
+        KC_ENT,  LCTL(KC_ENT), LCTL(KC_GRV),      KC_DEL,   RCS(KC_V),    KC_BSPC,      KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_FIND, KC_TRNS,
                                                         KC_TRNS, KC_TRNS, KC_TRNS,      KC_BTN2, KC_BTN1, KC_BTN3
     )
 };
