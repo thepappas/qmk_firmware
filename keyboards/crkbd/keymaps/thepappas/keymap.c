@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[1] = LAYOUT_split_3x6_3(
          KC_LCTL,   LGUI(KC_L),  LCA(KC_DEL), LCA(KC_END), LCA(KC_INS),    KC_PSCR,      LSFT(KC_LEFT), LSFT(KC_DOWN), LSFT(KC_UP), LSFT(KC_RGHT), LSFT(KC_ENT), KC_TRNS,
           KC_ENT,   LCTL(KC_Y),   LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V), LCTL(KC_Z),            KC_LEFT,       KC_DOWN,       KC_UP,       KC_RGHT,       KC_ENT,  KC_DEL,
-         SC_LSPO, LCTL(KC_ENT), LCTL(KC_GRV),      KC_DEL,   RCS(KC_V),    KC_BSPC,            KC_HOME,       KC_PGDN,     KC_PGUP,        KC_END,       KC_INS, SC_RSPC,
+         KC_LSFT, LCTL(KC_ENT), LCTL(KC_GRV),      KC_DEL,   RCS(KC_V),    KC_BSPC,            KC_HOME,       KC_PGDN,     KC_PGUP,        KC_END,       KC_INS, KC_RSFT,
                                                     KC_TRNS, KC_TRNS, KC_TRNS,             KC_TRNS, KC_TRNS, KC_TRNS
     ),
 	[2] = LAYOUT_split_3x6_3(
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[5] = LAYOUT_split_3x6_3(
         KC_TRNS, KC_TILD, KC_AMPR, KC_ASTR,   KC_NO,   KC_NO,      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_TRNS,
         KC_TRNS, KC_MINS,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,    KC_PMNS, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_TRNS,
-        SC_LSPO, KC_SCLN, KC_EXLM,   KC_AT, KC_HASH,  KC_EQL,    KC_PIPE, KC_BSLS, KC_UNDS, KC_TRNS, KC_TRNS, KC_RSFT,
+        KC_LSFT, KC_SCLN, KC_EXLM,   KC_AT, KC_HASH,  KC_EQL,    KC_PIPE, KC_BSLS, KC_UNDS, KC_TRNS, KC_TRNS, KC_RSFT,
                              KC_TRNS, KC_TRNS, KC_TRNS,              KC_TRNS, KC_TRNS, KC_TRNS
     ),
 	[6] = LAYOUT_split_3x6_3(
