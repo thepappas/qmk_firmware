@@ -74,46 +74,46 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 bool oled_task_user(void) {
     if (is_keyboard_master()) {
-    led_t led_state = host_keyboard_led_state();
+        led_t led_state = host_keyboard_led_state();
 
-    // Host Keyboard Layer Status
-    oled_write_P(PSTR("\nLayer_____\n"), false);
+        // Host Keyboard Layer Status
+        oled_write_P(PSTR("\nLayer_____\n"), false);
 
-    switch (get_highest_layer(layer_state)) {
-        case 0:
-            oled_write_P(PSTR("Base\n"), false);
-            break;
-        case 1:
-            oled_write_P(PSTR("Nav\n"), false);
-            break;
-        case 2:
-            oled_write_P(PSTR("Num\n"), false);
-            break;
-        case 3:
-            oled_write_P(PSTR("Media"), false);
-            break;
-        case 4:
-            oled_write_P(PSTR("FN\n"), false);
-            break;
-        case 5:
-            oled_write_P(PSTR("SYM\n"), false);
-            break;
-        case 6:
-            oled_write_P(PSTR("Mouse"), false);
-            break;
-        default:
-            // Or use the write_ln shortcut over adding '\n' to the end of your string
-            oled_write_ln_P(PSTR("Undefined\n"), false);
+        switch (get_highest_layer(layer_state)) {
+            case 0:
+                oled_write_P(PSTR("Base\n"), false);
+                break;
+            case 1:
+                oled_write_P(PSTR("Nav\n"), false);
+                break;
+            case 2:
+                oled_write_P(PSTR("Num\n"), false);
+                break;
+            case 3:
+                oled_write_P(PSTR("Media"), false);
+                break;
+            case 4:
+                oled_write_P(PSTR("FN\n"), false);
+                break;
+            case 5:
+                oled_write_P(PSTR("SYM\n"), false);
+                break;
+            case 6:
+                oled_write_P(PSTR("Mouse"), false);
+                break;
+            default:
+                // Or use the write_ln shortcut over adding '\n' to the end of your string
+                oled_write_ln_P(PSTR("Undefined\n"), false);
+        }
+
+        // Host Keyboard LED Status
+        oled_write_P(PSTR("\n\n\nLocks_____\n"), false);
+        oled_write_P(led_state.num_lock ? PSTR("NUM\n") : PSTR("\n"), false);
+        oled_write_P(led_state.caps_lock ? PSTR("CAP\n") : PSTR("\n"), false);
+        oled_write_P(led_state.scroll_lock ? PSTR("SCR\n ") : PSTR("\n"), false);
     }
-
-    // Host Keyboard LED Status
-    oled_write_P(PSTR("\n\n\nLocks_____\n"), false);
-    oled_write_P(led_state.num_lock ? PSTR("NUM\n") : PSTR("\n"), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP\n") : PSTR("\n"), false);
-    oled_write_P(led_state.scroll_lock ? PSTR("SCR\n ") : PSTR("\n"), false);
-    } else {
+    else {
         render_logo();  // Renders a static logo
-        oled_scroll_left();  // Turns on scrolling
     }
 
     return false;
