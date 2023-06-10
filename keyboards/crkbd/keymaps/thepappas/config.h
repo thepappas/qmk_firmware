@@ -47,3 +47,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
 //#define NO_AUTO_SHIFT_SPECIAL
+
