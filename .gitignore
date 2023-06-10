@@ -49,6 +49,7 @@ quantum/version.h
 .project
 .settings/
 
+
 # ?
 .dep
 .history/
@@ -68,6 +69,7 @@ CMakeLists.txt
 .vscode/tasks.json
 .vscode/temp.sql
 tags
+.vagrant/
 
 # Ignore image/font files
 *.bmp
