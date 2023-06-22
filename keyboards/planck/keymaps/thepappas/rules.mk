@@ -4,3 +4,5 @@ LTO_ENABLE = yes
 # Not enough USB endpoints
 CONSOLE_ENABLE = no
 MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+NKRO_ENABLE = yes
