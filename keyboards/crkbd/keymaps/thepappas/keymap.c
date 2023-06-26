@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "thepappas.h"
 
 enum layer_names {
     Base,
@@ -31,34 +32,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_PDOT, KC_0, KC_MINS,             KC_TRNS, KC_TRNS, KC_TRNS
     ),
 	[Sym] = LAYOUT_split_3x6_3(
-        KC_TRNS, KC_TILD, KC_AMPR, KC_ASTR,   KC_NO,   KC_NO,     KC_NUM,  KC_APP,  KC_INS,  KC_DEL, KC_BSPC, KC_TRNS,
-        KC_TRNS, KC_MINS,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,    KC_PMNS, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_TRNS,
+        KC_LALT, KC_TILD, KC_AMPR, KC_ASTR,   KVM1,   KVM2,     KC_NUM,  KC_APP,  KC_INS,  KC_DEL, KC_BSPC, KC_TRNS,
+        KC_LCTL, KC_MINS,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,    KC_PMNS, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_TRNS,
         KC_LSFT, KC_SCLN, KC_EXLM,   KC_AT, KC_HASH,  KC_EQL,    KC_PIPE, KC_BSLS, KC_UNDS, KC_TRNS, KC_TRNS, KC_RSFT,
                              KC_TRNS, KC_TRNS, KC_TRNS,              KC_TRNS, KC_TRNS, KC_TRNS
     ),
 	[FN] = LAYOUT_split_3x6_3(
-        KC_LCTL, KC_F12, KC_F7, KC_F8, KC_F9, KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
-        KC_LALT, KC_F11, KC_F4, KC_F5, KC_F6, KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RALT,
+        KC_LALT, KC_F12, KC_F7, KC_F8, KC_F9, KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
+        KC_LCTL, KC_F11, KC_F4, KC_F5, KC_F6, KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RALT,
         SC_LSPO, KC_F10, KC_F1, KC_F2, KC_F3, KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
                           KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
     ),
     [Nav] = LAYOUT_split_3x6_3(
-         KC_LALT,       KC_TAB,       KC_APP,     KC_BSPC,      KC_ENT,     KC_DEL,      LSFT(KC_LEFT), LSFT(KC_DOWN), LSFT(KC_UP), LSFT(KC_RGHT), LSFT(KC_ENT), KC_TRNS,
+         KC_LALT,       KC_TAB,       KC_APP,     KC_BSPC,      KC_ENT,     KC_DEL,      LSFT(KC_LEFT), LSFT(KC_DOWN), LSFT(KC_UP), LSFT(KC_RGHT), LSFT(KC_ENT), ALT_TAB,
          KC_LCTL,   LCTL(KC_Y),   LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V), LCTL(KC_Z),            KC_LEFT,       KC_DOWN,       KC_UP,       KC_RGHT,       KC_ENT,  KC_DEL,
          KC_LSFT, LCTL(KC_ENT), LCTL(KC_GRV),   RCS(KC_A),   RCS(KC_V),     KC_ESC,            KC_HOME,       KC_PGDN,     KC_PGUP,        KC_END,       KC_INS, KC_RSFT,
                                                      KC_TRNS, KC_TRNS, KC_TRNS,             KC_TRNS, KC_TRNS, KC_TRNS
     ),
 	[Mouse] = LAYOUT_split_3x6_3(
-        KC_LALT,       KC_TAB,       KC_APP,     KC_BSPC,      KC_ENT,     KC_DEL,      LSFT(KC_LEFT), LSFT(KC_DOWN), LSFT(KC_UP), LSFT(KC_RGHT), LSFT(KC_ENT), KC_TRNS,
+        KC_LALT,       KC_TAB,       KC_APP,     KC_BSPC,      KC_ENT,     KC_DEL,      LSFT(KC_LEFT), LSFT(KC_DOWN), LSFT(KC_UP), LSFT(KC_RGHT), LSFT(KC_ENT), ALT_TAB,
         KC_LCTL,   LCTL(KC_Y),   LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V), LCTL(KC_Z),            KC_MS_L,       KC_MS_D,     KC_MS_U,       KC_MS_R,       KC_ENT,  KC_DEL,
         KC_LSFT, LCTL(KC_ENT), LCTL(KC_GRV),   RCS(KC_A),   RCS(KC_V),     KC_ESC,            KC_WH_L,       KC_WH_D,     KC_WH_U,       KC_WH_R,      KC_FIND, KC_RSFT,
                                                         KC_TRNS, KC_TRNS, KC_TRNS,      KC_BTN2, KC_BTN1, KC_BTN3
     ),
     [CTL] = LAYOUT_split_3x6_3(
-        KC_TRNS, LGUI(KC_L), LCA(KC_DEL), LCA(KC_END), LCA(KC_INS),   KC_NO,    KC_WFWD, KC_WSTP, KC_WREF, KC_WBAK,  KC_DEL, KC_TRNS,
-        KC_SLEP,    KC_PSCR,      KC_PWR,      KC_NUM,     KC_CAPS,   KC_NO,    KC_MRWD, KC_MPLY, KC_MSTP, KC_MFFD, KC_MPRV,  KC_INS,
+        KC_TRNS, LGUI(KC_L), LCA(KC_DEL), LCA(KC_END), LCA(KC_INS),    KVM1,    KC_WFWD, KC_WSTP, KC_WREF, KC_WBAK,  KC_DEL, ALT_TAB,
+        KC_SLEP,    KC_PSCR,      KC_PWR,      KC_NUM,     KC_CAPS,    KVM2,    KC_MRWD, KC_MPLY, KC_MSTP, KC_MFFD, KC_MPRV,  KC_INS,
         QK_BOOT,    DB_TOGG,     KC_WAKE,       KC_NO,     KC_SCRL,   KC_NO,    KC_MUTE, KC_VOLU, KC_VOLD, KC_EJCT, KC_LEFT, KC_RGHT,
-                                             KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS
+                                             KC_TRNS, KC_TRNS, ALT_TAB,               KC_TRNS, KC_TRNS, KC_TRNS
     )
 };
 
