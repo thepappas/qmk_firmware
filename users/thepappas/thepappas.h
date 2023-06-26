@@ -23,14 +23,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
     case KVM1:
-      tap_code(KC_LCTL);
-      tap_code(KC_LCTL);
-      SEND_STRING("1");
+      if (record->event.pressed) {
+        tap_code_delay(KC_LCTL,25);
+        tap_code_delay(KC_LCTL,25);
+        tap_code(KC_1);
+      } else {
+            // when keycode QMKBEST is released
+      }
       break;
     case KVM2:
-      tap_code(KC_LCTL);
-      tap_code(KC_LCTL);
-      SEND_STRING("2");
+      if (record->event.pressed) {
+        tap_code_delay(KC_LCTL,25);
+        tap_code_delay(KC_LCTL,25);
+        tap_code(KC_2);
+      } else {
+            // when keycode QMKBEST is released
+      }
       break;
   }
   return true;
