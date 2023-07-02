@@ -37,7 +37,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         tap_code_delay(KC_LCTL,25);
         tap_code(KC_2);
       } else {
-            // when keycode QMKBEST is released
+            // Null when keycode is released
       }
       break;
   }
