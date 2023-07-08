@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [CTL] = LAYOUT_split_3x6_3(
         KC_TRNS, LGUI(KC_L), LCA(KC_DEL), LCA(KC_END), LCA(KC_INS),    KVM1,    KC_WFWD, KC_WSTP, KC_WREF, KC_WBAK,  KC_DEL, ALT_TAB,
-        KC_SLEP,    KC_PSCR,      KC_PWR,      KC_NUM,     KC_CAPS,    KVM2,    KC_MRWD, KC_MPLY, KC_MSTP, KC_MFFD, KC_MPRV,  KC_INS,
+        KC_PSCR,    KC_SLEP,      KC_PWR,      KC_NUM,     KC_CAPS,    KVM2,    KC_MRWD, KC_MPLY, KC_MSTP, KC_MFFD, KC_MPRV,  KC_INS,
         QK_BOOT,    DB_TOGG,     KC_WAKE,       KC_NO,     KC_SCRL,   KC_NO,    KC_MUTE, KC_VOLU, KC_VOLD, KC_EJCT, KC_LEFT, KC_RGHT,
                                              KC_TRNS, KC_TRNS, ALT_TAB,               KC_TRNS, KC_TRNS, KC_TRNS
     )
