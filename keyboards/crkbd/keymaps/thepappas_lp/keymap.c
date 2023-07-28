@@ -1,6 +1,9 @@
 #include QMK_KEYBOARD_H
 #include "thepappas.h"
 
+#define PRO_MICRO_LED_TX D5
+#define PRO_MICRO_LED_RX B0
+
 enum layer_names {
     Base,
     Num,
@@ -129,3 +132,15 @@ bool oled_task_user(void) {
     return false;
 }
 #endif
+
+void matrix_init_user(void) {
+  setPinOutput(PRO_MICRO_LED_TX);
+  setPinOutput(PRO_MICRO_LED_RX);
+}
+
+bool led_update_user(led_t led_state) {
+  writePin(PRO_MICRO_LED_TX, !led_state.num_lock);
+  writePin(PRO_MICRO_LED_RX, !led_state.caps_lock);
+  return true;
+}
+
