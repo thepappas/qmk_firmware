@@ -42,8 +42,9 @@
 */
 // #define MIDI_ADVANCED
 
-/* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
-// #define MIDI_TONE_KEYCODE_OCTAVES 2
-
-// Most tactile encoders have detents every 4 stages
-#define ENCODER_RESOLUTION 4
+/*
+ * Encoder options
+ */
+// #define PLANCK_ENCODER_SETTLE_PIN_STATE_DELAY 20
+// #define ENCODER_MAP_KEY_DELAY 10
+// #define ENCODER_RESOLUTION 4
